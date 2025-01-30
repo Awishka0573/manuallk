@@ -8,8 +8,9 @@
     font-size: 20px;
     color: #04e4d8
 }
-.logo{
-    max-width: 40px;
-    margin-top: 50px;
+.navbar .logo{
+    display: flex;
+    width: 30px;
+    
 }
 
