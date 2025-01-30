@@ -9,6 +9,10 @@
 <body>
 <header>
     <div class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo final.png">
+
+        </div>
         <ul class ="nav_list">
             <li>Home</li>
             <li>find</li>

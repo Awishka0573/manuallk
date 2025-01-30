@@ -1,11 +1,15 @@
 .nav_list{
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: flex-end;
-    padding-right: 30px;
+    padding-right: 50px;
+    padding-top: 20px;
     list-style: none;
     font-size: 20px;
     color: #04e4d8
 }
-
+.navbar .logo{
+    max-width: 40px;
+    margin-top: 50px;
+}
 
