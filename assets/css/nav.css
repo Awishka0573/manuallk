@@ -1,16 +1,31 @@
+.navbar {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 50px; 
+}
 .nav_list{
     display: flex;
     gap: 4rem;
     justify-content: flex-end;
     padding-right: 50px;
-    padding-top: 20px;
     list-style: none;
     font-size: 20px;
     color: #04e4d8
 }
-.navbar .logo{
+ .logo{
     display: flex;
-    width: 30px;
+    height: 80px;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
+
     
+}
+.lname{
+    font-size: 30px;
+    display: flex;
+    align-self: auto;
+    padding-left: 10px;
 }
 

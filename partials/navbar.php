@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="../assets/css/nav.css">
-    <title>manuallk</title>
+    <title>Manuallk</title>
 </head>
 <body>
 <header>
     <div class="navbar">
         <div class="logo">
             <img src="../assets/images/logo final.png">
-
+            <p class="lname">ManualLK</p>
         </div>
+
         <ul class ="nav_list">
             <li>Home</li>
             <li>find</li>
             <li>Aboutus</li>
             <li>Contactus</li>
         </ul>
+        
     </div>
     
 </body>
