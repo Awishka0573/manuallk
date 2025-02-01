@@ -65,23 +65,21 @@ function initComparisons() {
 <?php
     include('../manuallk/partials/navbar.php');
     ?>
-   
- <p class="click_drag">Can you click the cursor here and move it left and right</p>
-
-<!--<p>Click and slide the blue slider to compare two images:</p> -->
-
+    <div class="move">
 <div class="img-comp-container">
   <div class="img-comp-img">
-    <img src="../manuallk/assets/images/photo-1493238792000-8113da705763.png" width="600" height="400">
+    <img src="../manuallk/assets/images/r34.png" width="600" height="400">
   </div>
   <div class="img-comp-img img-comp-overlay">
-    <img src="../manuallk/assets/images/bence.png" width="600" height="400">
+    <img src="../manuallk/assets/images/photo-1493238792000-8113da705763.png" width="600" height="400">
   </div>
 </div>
-
+</div>
 <script>
 initComparisons();
 </script>
+
+
 
 </body>
 </html>

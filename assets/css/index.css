@@ -1,11 +1,8 @@
-
 * {box-sizing: border-box;}
 
 .img-comp-container {
   position: relative;
-  height: 200px; 
-  padding-top: 100px;
-  padding-left: 30%;
+  height: 200px; /*should be the same height as the images*/
 }
 
 .img-comp-img {
@@ -31,6 +28,9 @@
   opacity: 0.7;
   border-radius: 50%;
 }
-.click_drag{
-    
+.move{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 450px;
+
 }
