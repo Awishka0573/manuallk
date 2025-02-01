@@ -2,7 +2,7 @@
 <header>
     <div class="navbar">
         <div class="logo">
-            <img src="../assets/images/logo final.png">
+            <img src="assets\images\logo.jpeg">
             <p class="lname">ManualLK</p>
         </div>
 
