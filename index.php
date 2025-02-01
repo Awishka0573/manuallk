@@ -61,6 +61,7 @@ function initComparisons() {
 }
 </script>
 </head>
+
 <body>
 <?php
     include('../manuallk/partials/navbar.php');

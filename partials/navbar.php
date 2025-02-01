@@ -7,10 +7,10 @@
         </div>
 
         <ul class ="nav_list">
-            <li>Home</li>
-            <li>find</li>
-            <li>Aboutus</li>
-            <li>Contactus</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">find</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contactus</a></li>
         </ul>
         
     </div>
