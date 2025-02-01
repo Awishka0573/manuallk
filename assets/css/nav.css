@@ -2,7 +2,8 @@
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 10px 50px; 
+    padding: -100px 50px; 
+
 }
 .nav_list{
     display: flex;
@@ -11,7 +12,7 @@
     padding-right: 50px;
     list-style: none;
     font-size: 20px;
-    color: #000a0a
+    color: #000000
 }
  .logo{
     display: flex;
