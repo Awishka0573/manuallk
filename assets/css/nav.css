@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Rancho-Regular;
+    src: url(../fonts/Rancho-Regular.ttf);
+}
 
 .navbar {
     display: flex;
@@ -40,6 +44,6 @@
 }
 
 .nav_list li:hover {
-    color: red;
+    color: rgb(255, 53, 53);
     cursor: pointer;
 }
