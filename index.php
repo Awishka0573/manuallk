@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../manuallk/assets/css/index.css">
+    <link rel="stylesheet" href="../manuallk/assets/css/ind.css">
     <link rel="stylesheet" href="../manuallk/assets/css/nav.css">
     <title>Manuallk</title>
     <script>
@@ -60,6 +60,42 @@ function initComparisons() {
   }
 }
 </script>
+<style>* {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+  height: 200px; 
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  /* vertical-align:middle; */
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color:rgb(31, 140, 223) ;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+.move{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 700px;
+
+}</style>
 </head>
 
 <body>
