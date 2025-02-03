@@ -64,7 +64,7 @@ function initComparisons() {
 
 <body>
 <?php
-    include('../manuallk/');
+    include('../manuallk/partials/navbar.php');
     ?>
     <div class="move">
 <div class="img-comp-container">
