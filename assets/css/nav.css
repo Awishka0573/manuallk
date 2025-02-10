@@ -2,50 +2,96 @@
     font-family: Rancho-Regular;
     src: url(../fonts/Rancho-Regular.ttf);
 }
-.navbar {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px 50px; 
-    flex-wrap: wrap; 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     
 }
-.nav_list {
+
+.navbar {
     display: flex;
-    gap: 4rem;
-    justify-content: flex-end;
-    padding-right: 50px;
-    list-style: none;
-    font-size: 20px;
-    color: #000000;
-    flex-wrap: wrap;   
-    max-width: 100%;
-    flex-wrap: wrap;
-    justify-items: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 40px ;
+    background-color: #ffffff;
+    color: rgb(7, 0, 0);
+   
 }
-.nav_list li a{
-    text-decoration: none;
-    color: inherit;
-}
+
 .logo {
     display: flex;
-    align-items: center; 
-    gap: 10px;
+    align-items: center;
+    gap: 1rem;
 }
+
 .logo img {
+    width: 80px;
     height: 80px;
-    width: auto;
-    display: block;
-    flex-wrap: wrap;
+    margin-right: 10px;
 }
-.lname {
-    font-size: 30px;
-    padding-left: 10px;
-    font-family:Rancho-Regular;
-    flex-wrap: wrap;
+
+.logo span {
+    font-size: 35px;
+    font-family:Rancho-Regular ;
+    
 }
-.nav_list li:hover {
-    color: rgb(255, 53, 53);
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+.nav-links li {
+    margin: 0 15px;
+   
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(12, 0, 0);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f63232;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
     cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #222;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
 }
