@@ -1,97 +1,61 @@
-@font-face {
-    font-family: Rancho-Regular;
-    src: url(../fonts/Rancho-Regular.ttf);
-}
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+header {
     
+    background-color: #ba0f42;
+    padding: 1px 0;
 }
 
 .navbar {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px ;
-    background-color: #ffffff;
-    color: rgb(7, 0, 0);
-   
+    padding: 5px;
 }
 
 .logo {
+    
     display: flex;
+    text-align: center;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 20px;
 }
 
-.logo img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-}
-
-.logo span {
-    font-size: 35px;
-    font-family:Rancho-Regular ;
+.logo p {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
     
 }
 
+
+.logo img {
+    height: 70px;
+  
+}
+
 .nav-links {
-    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
     gap: 4rem;
+    padding-right: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px;
-   
+    margin-right: 20px;
 }
 
-.nav-links a {
+.nav-links li a {
+    color: #ffffff;
     text-decoration: none;
-    color: rgb(12, 0, 0);
-    font-size: 18px;
-    transition: 0.3s;
+    font-size: 20px;
 }
 
-.nav-links a:hover {
-    color: #f63232;
+.nav-links li a:hover {
+    color: #d3ff24;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #222;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-}
