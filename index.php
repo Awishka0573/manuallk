@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"  href="../manuallk/assets/css/nav.css">
   <link rel="stylesheet"  href="../manuallk/assets/css/index.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <title>ManualLK</title>
   <link rel="icon" type="image/png" href="../manuallk/assets/images/logotransp.png">
 </head>
@@ -25,6 +26,15 @@
       Welcome to ManualLK<br> 
       Sri Lanka's largest vehicle marketplace. Whether you're looking to buy or sell, we offer a wide range of vehicles at affordable prices.<br>
       Our platform connects buyers and sellers seamlessly, ensuring a hassle-free experience. Start your journey today and find the perfect vehicle to match your needs.    </div>
+  </div>
+
+  <div class="os_container">
+    <div class="osb"> 
+      <button class="buy">Buy your vehicle</button>
+    </div>
+    <div class="oss">
+      <button class="sell">Sell your vehicle</button> 
+    </div>
   </div>
 
   <div class="card_container">
@@ -57,6 +67,8 @@
       </div>
     </div>
   </div>
+
+  
 
   <footer class="footer">
   	 <div class="container">
