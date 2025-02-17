@@ -1,28 +1,93 @@
-.container{
+.container1{
     display: flex;
+    justify-content: center;
+    gap: 3rem;
+    height: 80vh;
+    background-image: url('../images/geometry-cyberspace-lines-abstra.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
 }
 
 .box{
-    background-color: crimson;
+    background: rgba(236, 236, 236, 0.201);
+    backdrop-filter: blur(7px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615);
+    border-radius: 4px;
     width: 500px;
-    
     padding: 20px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    text-align: center; 
+    height: 100%; 
     
+
+   
 }
 
 .list{
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: white;
+    text-align: center;
+    
 }
 
 .list_i{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 3rem;
+    height: 100%;
+    gap: 5rem;
+   
+   
 }
 
 .formdiv{
-    background-image: url('../images/contact.png');
+    background-image: url('../images/contact1.png');
+    /* background: rgba(236, 236, 236, 0.201); */
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615);
+    border-radius: 4px;
+    background-size: cover;
+    width: 800px;
+    padding: 80px;
+    font-size: 16px;
+    
+    
+}
+.frm{
+    color: rgb(255, 255, 255);
+    
+    
+
+}
+.frm .name{
+    font-size: 20px;
+    
+    
+}
+
+.frm .email{
+    font-size: 20px;
+    
+    
+}
+.frm .msg{
+    font-size: 20px;
+    
+    
+}
+.frm .btn{
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color: rgb(0, 255, 251);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.frm .btn :hover{
+    background-color: aliceblue;
+    cursor: pointer;
 }
