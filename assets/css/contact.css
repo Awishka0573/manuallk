@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+}
+
+.box{
+    background-color: crimson;
+    width: 500px;
+    
+    padding: 20px;
+    
+}
+
+.list{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.list_i{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+}
+
+.formdiv{
+    background-image: url('../images/contact.png');
+}
