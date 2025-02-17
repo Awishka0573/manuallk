@@ -5,10 +5,10 @@
             <p>ManualLK</p>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
             <li><a href="#">Find</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="pages\contactus.php">Contact</a></li>
         </ul>
     </div>
 </header>
