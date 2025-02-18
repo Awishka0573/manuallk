@@ -17,13 +17,23 @@
   include('../partials/navbar.php');
 ?>
 <div class="container1">
-    <div class="box">
-        <div class="list">
-            <ul class="list_i">
-                <li>Adress</li>
+    <div class="box1">
+        <div class="adress">
+        <h3>Adress</h3>
+            <p>No.01,Bandaranayaka mw, Ballapana Galigamuwa Town.</p>
+        </div>
+        <div class="contact">
+        <h3>Contact</h3>
+            <p>0701224436</p>
+        </div>
+        <div class="email1">
+            <h3>Email</h3>
+            <p>awishkaisuru0573@gmail.com</p>
+        <!-- <ul class="list_i">
+                <li>Adress <br> <p></p> </li>
                 <li>Contact</li>
                 <li>email</li>
-            </ul>
+            </ul> -->
         </div>
     </div>
     <div class="formdiv">

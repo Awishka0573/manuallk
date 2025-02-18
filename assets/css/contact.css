@@ -46,50 +46,95 @@
 
 .formdiv{
     background-image: url('../images/contact1.png');
-    /* background: rgba(236, 236, 236, 0.201); */
-    backdrop-filter: blur(10px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615);
     border-radius: 4px;
     background-size: cover;
     width: 800px;
     padding: 80px;
-    font-size: 16px;
-    
-    
+    font-size: 16px;  
 }
 .frm{
     color: rgb(255, 255, 255);
-    
-    
-
 }
 .frm .name{
-    font-size: 20px;
-    
-    
+    font-size: 20px;   
 }
-
 .frm .email{
-    font-size: 20px;
-    
-    
+    font-size: 20px;  
 }
 .frm .msg{
-    font-size: 20px;
-    
-    
+    font-size: 20px;   
 }
 .frm .btn{
     font-size: 18px;
     padding: 10px 30px;
-    background-color: rgb(0, 255, 251);
-    color: rgb(0, 0, 0);
+    background-color: rgb(62, 53, 245);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .frm .btn:hover {
     background-color: rgb(255, 255, 255); 
     color: rgb(80, 74, 74); 
+}
+
+.adress{
+    background: rgba(236, 236, 236, 0.201);
+    backdrop-filter: blur(7px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615);
+    border-radius: 4px;
+    padding: 30px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+    height: 20vh;
+    width: 500px; 
+}
+.contact{
+    background: rgba(236, 236, 236, 0.201);
+    backdrop-filter: blur(7px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615);
+    border-radius: 4px;
+    padding: 30px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+    height: 20vh;  
+    width: 500px;
+
+}
+.email1{
+    background: rgba(236, 236, 236, 0.201);
+    backdrop-filter: blur(7px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615);
+    border-radius: 4px;
+    padding: 30px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+    height: 20vh;  
+    width: 500px;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;  
+    align-items: center;  
+    text-align: center; 
+    height: 100%; 
+    
+}
+
+.box1 h3{
+    color: white;
+
 }
