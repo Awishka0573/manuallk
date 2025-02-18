@@ -32,10 +32,10 @@
   	 		<div class="footer-col">
   	 			<h4>follow us</h4>
   	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 				<a href="https://web.facebook.com/profile.php?id=100073709115630"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://x.com/awishka0573"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://www.instagram.com/awishka_isuru/"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://www.linkedin.com/in/awishka-isuru-415789202/"><i class="fab fa-linkedin-in"></i></a>
   	 			</div>
   	 		</div>
   	 	</div>

@@ -19,6 +19,7 @@
 <div class="container1">
     <div class="box1">
         <div class="adress">
+            <!-- <img src="../assets/images/address.png" alt=""> -->
         <h3>Adress</h3>
             <p>No.01,Bandaranayaka mw, Ballapana Galigamuwa Town.</p>
         </div>
