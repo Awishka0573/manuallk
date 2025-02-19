@@ -6,6 +6,8 @@
     <link rel="stylesheet"  href="../assets/css/nav.css">
     <link rel="stylesheet"  href="../assets/css/footer.css">
     <link rel="stylesheet"  href="../assets/css/contact.css">
+    <link rel="stylesheet"  href="../assets/css/about.css">
+    
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" type="image/png" href="../assets/images/logotransp.png">
 
@@ -17,6 +19,10 @@
   include('../partials/navbar.php');
 ?>
 
+<div class="box2"> 
+
+
+</div>
 
 
 
