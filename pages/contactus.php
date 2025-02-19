@@ -19,22 +19,19 @@
 <div class="container1">
     <div class="box1">
         <div class="adress">
-            <!-- <img src="../assets/images/address.png" alt=""> -->
+            <img src="../assets/images/adress.png" alt="">
         <h3>Adress</h3>
             <p>No.01,Bandaranayaka mw, Ballapana Galigamuwa Town.</p>
         </div>
         <div class="contact">
+            <img src="../assets/images/contacticon.png" alt="">
         <h3>Contact</h3>
             <p>0701224436</p>
         </div>
         <div class="email1">
+            <img src="../assets/images/mail.png" alt="">
             <h3>Email</h3>
-            <p>awishkaisuru0573@gmail.com</p>
-        <!-- <ul class="list_i">
-                <li>Adress <br> <p></p> </li>
-                <li>Contact</li>
-                <li>email</li>
-            </ul> -->
+            <a href="mailto:awishkaisuru0573@gmail.com">awishkaisuru0573@gmail.com</a>
         </div>
     </div>
     <div class="formdiv">
