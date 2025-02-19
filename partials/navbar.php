@@ -7,7 +7,7 @@
         <ul class="nav-links">
             <li><a href="../index.php">Home</a></li>
             <li><a href="#">Find</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="pages\aboutus.php">About</a></li>
             <li><a href="pages\contactus.php">Contact</a></li>
         </ul>
     </div>
