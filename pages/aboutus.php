@@ -19,10 +19,27 @@
   include('../partials/navbar.php');
 ?>
 
-<div class="box2"> 
-
-
-</div>
+    <div class="box2"> 
+        <div class="abcrd">
+            <h3>About Us</h3><br>
+            <p>Welcome to ManualLK, your trusted platform for buying and selling vehicles. Our mission is to connect buyers and sellers, 
+                    providing a seamless and secure experience for all users. Whether you are looking for a brand-new car, a pre-owned vehicle, 
+                    or want to sell your own, we make the process simple and efficient.<br>
+                    With a user-friendly interface and advanced search options, we ensure that you find the perfect vehicle that fits your needs and budget. 
+                    Our team is committed to maintaining transparency, security, and customer satisfaction. 
+                    Join us today and experience hassle-free vehicle trading like never before!
+            </p>
+        </div>
+        <div class="card">
+            <img src="../assets/images/ai.jpg" alt="Avatar" style="width: 100%">
+            <div class="container">
+                <h4><b>Awishka Isuru</b></h4>
+                <p>Full stack Developer</p><br>
+                    0701224436
+                <a href="mailto:awishkaisuru0573@gmail.com">awishkaisuru0573@gmail.com</a>
+            </div>
+        </div>
+    </div>
 
 
 
