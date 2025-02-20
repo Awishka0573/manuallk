@@ -30,7 +30,7 @@
                     Join us today and experience hassle-free vehicle trading like never before!
             </p>
         </div>
-        <div class="card">
+        <div class="cardai">
             <img src="../assets/images/ai.jpg" alt="Avatar" style="width: 100%">
             <div class="container">
                 <h4><b>Awishka Isuru</b></h4>
