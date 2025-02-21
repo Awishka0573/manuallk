@@ -40,7 +40,8 @@
       <button class="sell">Sell your vehicle</button> 
     </div>
   </div>
-
+  <div class="crd_con">
+   <h3 class="card_heading">Sri Lankan's Most Populer</h3>
   <div class="card_container">
   <div class="card">
       <img src="../manuallk/assets/images/ct100.png" alt="Avatar" style="width: 100%">
@@ -70,6 +71,7 @@
         <p>Toyota 2500cc</p>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="box2"> 
