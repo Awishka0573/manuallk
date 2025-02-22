@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.container_search{
+    background-color: aqua;
+    height: 60vh;
+    padding: 50px;
+    margin: 50px;
+}
