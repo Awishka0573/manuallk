@@ -15,7 +15,7 @@
     <div class="search-container text-center">
         <h3 class="mb-4"><b>Find The Best Vehicle For You</b></h3>
         <form action="search.php" method="GET">
-            <div class="row_g-3">
+            <div class="row g-3">
                 <div class="col-md-4">
                     <select name="make" class="form-control">
                         <option value="">Any Make</option>
