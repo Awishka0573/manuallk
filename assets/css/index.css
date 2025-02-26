@@ -158,6 +158,7 @@ img {
   border-radius: 10px; 
   border: 1px solid rgba(255, 255, 255, 0.682); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615); 
+  cursor: pointer;
 }
 
 .sell{
@@ -168,6 +169,7 @@ img {
   border-radius: 10px; 
   border: 1px solid rgba(255, 255, 255, 0.682); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615); 
+  cursor: pointer;
 }
 
 .os_container{
@@ -175,12 +177,12 @@ img {
   justify-content: center;
   gap: 2rem;
   
+  
 
 }
 
 .osb :hover{
   
-  font-size: 25px;
   background-color: #e20000
   
 }

@@ -34,7 +34,7 @@
 
   <div class="os_container">
     <div class="osb"> 
-      <button class="buy">Buy your vehicle</button>
+    <a href="pages\find.php"><button class="buy">Buy your vehicle</button></a>
     </div>
     <div class="oss">
       <button class="sell">Sell your vehicle</button> 
