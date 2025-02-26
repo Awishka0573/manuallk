@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find</title>
     <link rel="stylesheet"  href="../assets/css/find.css">
-    <link rel="icon" type="image/png" href="../manuallk/assets/images/logotransp.png">
+    <link rel="icon" type="image/png" href="../assets/images/logotransp.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
