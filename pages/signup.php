@@ -13,7 +13,8 @@
 
 <div class="formbg">
     <div class="sideimg">
-        
+        <h3 class="here">SIGN UP <br>
+        Here</h3>
     </div>
     <div class="formdiv">
             <form class="frm" action="#" method="post">
@@ -35,6 +36,7 @@
                 <input type="submit" class="btn" value="Submit">
             </form>
     </div>
+    
 </div>
     
 </body>
