@@ -3,7 +3,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
    
 }
 
@@ -19,6 +18,11 @@ body, html {
     background-image: url(../images/A-purple-space-4K-OLED-Desktop-W.png); 
     background-size: cover;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: -3rem;
     
 }
 
@@ -26,12 +30,33 @@ body, html {
     color: aliceblue;
     font-size: 35px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
+    margin-top: -20px;
     justify-content: center;
     align-items: center;
 
 }
+.sideimg .here1{
+    color: aliceblue;
+    font-size: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -20px;   
 
+}
+.sideimg .here2{
+    color: aliceblue;
+    font-size: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -10px;
+   
+
+}
+.sideimg .here3 a{
+    color: aliceblue;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
+}
 .formdiv{
     background-color: crimson;
     padding: 50px;

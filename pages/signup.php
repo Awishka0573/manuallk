@@ -13,8 +13,10 @@
 
 <div class="formbg">
     <div class="sideimg">
-        <h3 class="here">SIGN UP <br>
-        Here</h3>
+    <h3 class="here0">SIGN IN Here</h3>
+        <h3 class="here11">If you are already have an account... </h3>
+        <p class="here22">click here to </p>
+        <h3 class="here33"><a href="../pages/signin.php">sign in</h3></a>
     </div>
     <div class="formdiv">
             <form class="frm" action="#" method="post">
