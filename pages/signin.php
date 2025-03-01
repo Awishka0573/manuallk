@@ -28,7 +28,7 @@
         <h3 class="here">SIGN IN Here</h3>
         <h3 class="here1">If you are already haven't an account... </h3>
         <p class="here2">click here to register</p>
-        <h3 class="here3"><a href="../pages/signup.php">sign in</h3></a>
+        <h3 class="here3"><a href="../pages/signup.php">sign up</h3></a>
 
     </div>
     
