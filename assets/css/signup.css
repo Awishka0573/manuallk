@@ -57,9 +57,13 @@ body, html {
     cursor: pointer;
 
 }
+.sideimg .here33 a:hover{
+    color: aqua;
+}
 .formdiv{
     background-color: crimson;
-    padding: 50px;
+    padding: 40px;
+    
     
 }
 
@@ -70,6 +74,23 @@ body, html {
     color: white;
     padding: 5px;
     
+}
+.formdiv .btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: rgb(10, 39, 228);
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.formdiv .btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+
 }
 
 

@@ -13,7 +13,7 @@
 
 <div class="formbg">
     <div class="sideimg">
-    <h3 class="here0">SIGN IN Here</h3>
+    <h3 class="here0">SIGN UP Here</h3>
         <h3 class="here11">If you are already have an account... </h3>
         <p class="here22">click here to </p>
         <h3 class="here33"><a href="../pages/signin.php">sign in</h3></a>
@@ -21,19 +21,19 @@
     <div class="formdiv">
             <form class="frm" action="#" method="post">
                 <label for="fname" class="fname">First Name</label><br>
-                <input type="text"  id="fname" name="fname" size="50" required><br><br>
+                <input type="text"  id="fname" name="fname" size="40" required><br><br>
 
                 <label for="lname" class="lname">Last Name</label><br>
-                <input type="text"  id="lname" name="lname" size="50" required><br><br>
+                <input type="text"  id="lname" name="lname" size="40" required><br><br>
 
                 <label for="contact" class="contact">Contact</label><br>
-                <input type="text"  id="contact" name="contact" size="50" required><br><br>
+                <input type="text"  id="contact" name="contact" size="40" required><br><br>
 
                 <label for="email" class="email">Email</label><br>
-                <input type="email" id="email" name="email" size="50" required><br><br>
+                <input type="email" id="email" name="email" size="40" required><br><br>
 
                 <label for="password" class="password">Password</label><br>
-                <input type="text"  id="password" name="password" size="50" required><br><br>
+                <input type="text"  id="password" name="password" size="40" required><br><br>
 
                 <input type="submit" class="btn" value="Submit">
             </form>
