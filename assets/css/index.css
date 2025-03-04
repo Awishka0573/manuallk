@@ -157,6 +157,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.682); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615); 
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .sell{
@@ -168,6 +169,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.682); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.615); 
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .os_container{

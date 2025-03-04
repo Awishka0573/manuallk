@@ -16,10 +16,10 @@
             <form class="frm" action="#" method="post">
                
                 <label for="email" class="email">Email</label><br>
-                <input type="email" id="email" name="email" size="40" required><br><br>
+                <input type="email" id="email" name="email" size="38" required><br><br>
 
                 <label for="password" class="password">Password</label><br>
-                <input type="text"  id="password" name="password" size="40" required><br><br>
+                <input type="text"  id="password" name="password" size="38" required><br><br>
 
                 <input type="submit" class="btn" value="Submit">
             </form>
@@ -30,10 +30,12 @@
         <p class="here2">click here to register</p>
         <h3 class="here3"><a href="../pages/signup.php">sign up</h3></a>
 
-    </div>
-    
-    
+    </div>   
 </div>
     
+<div class="home_container">
+    <a href="../index.php"><button class="homebtn">Back to Home</button></a>
+</div>
+
 </body>
 </html>

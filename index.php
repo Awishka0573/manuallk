@@ -37,7 +37,7 @@
     <a href="pages\find.php"><button class="buy">Buy your vehicle</button></a>
     </div>
     <div class="oss">
-      <button class="sell">Sell your vehicle</button> 
+    <a href="../manuallk/pages/signin.php"><button class="sell">Sell your vehicle</button></a>
     </div>
   </div>
   <div class="crd_con">
