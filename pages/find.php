@@ -64,6 +64,10 @@
     </div>
 </div>
 
+<div class="home_container1">
+    <a href="../index.php"><button class="homebtn1">Back to Home</button></a>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
