@@ -21,7 +21,7 @@
     <div class="box">
       <div class="glaz">
       <p>Welcome Home</p>
-      <button class="start-btn">Start Here</button>
+      <a href="pages\start.php"><button class="start-btn">Start Here</button></a>
     </div>
     </div>
   </div>
