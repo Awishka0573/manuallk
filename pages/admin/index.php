@@ -25,7 +25,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Dashboard - LMS Admin</title>
+  <title>Dashboard - ManualLK</title>
+  <link rel="icon" type="image/png" href="assets\images\logotransp.png">
 
   <!-- stylesheet table and site -->
   <link href="css/styles.css" rel="stylesheet" />
