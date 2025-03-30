@@ -35,6 +35,30 @@
     </div>
   </div>
 
+  <div class="vehilogo_container">
+        <div class="cardlogo">
+          <img src="../manuallk/assets/images/toyota.jpg" alt="Avatar" style="width: 100%">
+        </div>
+        <div class="cardlogo">
+          <img src="../manuallk/assets/images/bense.jpg" alt="Avatar" style="width: 100%">
+        </div>
+        <div class="cardlogo">
+          <img src="../manuallk/assets/images/bmw.jpg" alt="Avatar" style="width: 100%">
+       </div> 
+         <div class="cardlogo">
+          <img src="../manuallk/assets/images/nissan.jpg" alt="Avatar" style="width: 100%">
+        </div>
+        <div class="cardlogo">
+          <img src="../manuallk/assets/images/suzuki.jpg" alt="Avatar" style="width: 100%"> 
+         </div>
+         <div class="cardlogo">
+          <img src="../manuallk/assets/images/honda.jpg" alt="Avatar" style="width: 100%">
+        </div>
+        <div class="cardlogo">
+          <img src="../manuallk/assets/images/ISUZU-logo.jpg" alt="Avatar" style="width: 100%">
+        </div>   
+  </div>
+
   <div class="os_container">
     <div class="osb">
       <a href="pages/find.php"><button class="buy">Buy your vehicle</button></a>

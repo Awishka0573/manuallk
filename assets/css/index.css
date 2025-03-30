@@ -118,6 +118,21 @@ body{
   font-size: 25px;
 
 }
+.vehilogo_container{
+  display: flex;
+}
+.cardlogo{
+  padding: 20px;
+  transition: 0.3s;
+  
+  width: 15%;
+
+}
+.cardlogo:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  font-size: 17px;
+}
+
 .card {
   padding: 20px;
   transition: 0.3s;
