@@ -2,7 +2,7 @@
 $host = "localhost:3307";
 $user = "root";
 $pass = "";
-$dbname = "manuallk"; // Database name eka danna
+$dbname = "manuallk"; 
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
