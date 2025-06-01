@@ -1,29 +1,3 @@
-<?php
-session_start();
-include '../includes/dbconnect.php'; // Database connection file
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
-
-    // Prepare SQL Query
-    $sql = "INSERT INTO users (first_name, last_name, contact, email, password) VALUES (?, ?, ?, ?, ?)";
-
-    // Prepare statement to avoid SQL injection
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $fname, $lname, $contact, $email, $password);
-
-    if ($stmt->execute()) {
-        echo "<script>alert('Registration successful!'); window.location.href='../pages/signin.php';</script>";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +8,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../assets/css/signup.css">
 </head>
 <body>
+
+<?php
+session_start();
+require_once '../includes/dbconnect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+    $contact = mysqli_real_escape_string($conn, $_POST['contact']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // Check if email already exists
+    $check_email = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($check_email);
+    
+    if ($result->num_rows > 0) {
+        echo "<script>alert('Email already exists!');</script>";
+    } else {
+        // Insert new user
+        $sql = "INSERT INTO users (first_name, last_name, contact, email, password) 
+                VALUES ('$fname', '$lname', '$contact', '$email', '$password')";
+        
+        if ($conn->query($sql) === TRUE) {
+            echo "<script>alert('Registration successful! Please login.');
+                  window.location.href='signin.php';</script>";
+        } else {
+            echo "<script>alert('Error: " . $conn->error . "');</script>";
+        }
+    }
+}
+?>
 
 <div class="formbg">
     <div class="sideimg">

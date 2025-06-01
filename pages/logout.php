@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_destroy(); // Session clear karanawa
-header("Location: signin.php"); // Login page ekata redirect
-exit();
+session_destroy();
+echo "<script>alert('You have been logged out successfully!');
+      window.location.href='../index.php';</script>";
 ?>

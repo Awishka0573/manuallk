@@ -1,35 +1,3 @@
-<?php
-session_start();
-include '../includes/dbconnect.php'; // Database connection file
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    // Prepare statement to avoid SQL injection
-    $sql = "SELECT * FROM users WHERE email=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-        
-        // Verify password
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['user_id'] = $row['id'];
-            header("Location: ../pages/find.php");
-            exit(); // Stop further script execution
-        } else {
-            echo "<script>alert('Incorrect password!');</script>";
-        }
-    } else {
-        echo "<script>alert('No user found with that email address.');</script>";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +8,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../assets/css/signin.css">
 </head>
 <body>
+
+<?php
+session_start();
+require_once '../includes/dbconnect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['first_name'] = $user['first_name'];
+            
+            echo "<script>alert('Login successful!');
+                  window.location.href='../index.php';</script>";
+        } else {
+            echo "<script>alert('Invalid password!');</script>";
+        }
+    } else {
+        echo "<script>alert('User not found!');</script>";
+    }
+}
+?>
 
 <div class="formbg">
     <div class="formdiv">
