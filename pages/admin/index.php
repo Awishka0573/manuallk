@@ -5,6 +5,15 @@ include_once '../../includes/dbconnect.php';
 // Fetch all users from database
 $sql = "SELECT * FROM users ORDER BY id DESC";
 $result = $conn->query($sql);
+
+// Count total users
+$userCount = $conn->query("SELECT COUNT(*) as count FROM users")->fetch_assoc()['count'];
+
+// Count total vehicles
+$vehicleCount = $conn->query("SELECT COUNT(*) as count FROM vehicle")->fetch_assoc()['count'];
+
+// Count total feedback
+$feedbackCount = $conn->query("SELECT COUNT(*) as count FROM feedback")->fetch_assoc()['count'];
 ?>
 
 
@@ -98,8 +107,8 @@ $result = $conn->query($sql);
             </a>
             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="users.php">Manage Sellers</a>
-                <a class="nav-link" href="subject.php">Manage Subject</a>
+                <a class="nav-link" href="adds.php">Manage Adds</a>
+                <a class="nav-link" href="feedback.php">Manage Feedbacks</a>
               </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapseLayouts">
@@ -125,9 +134,61 @@ $result = $conn->query($sql);
 
           <div class="grey-bg container-fluid">
             <section id="minimal-statistics">
-              <div class="row mb-3"></div>
+              <div class="row mb-4">
+                <!-- Users Card -->
+                <div class="col-xl-4 col-sm-6 col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between px-md-1">
+                        <div>
+                          <h3 class="text-warning"><?php echo $userCount; ?></h3>
+                          <p class="mb-0">Total Users</p>
+                        </div>
+                        <div class="align-self-center">
+                          <i class="fas fa-users text-warning fa-3x"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Vehicles Card -->
+                <div class="col-xl-4 col-sm-6 col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between px-md-1">
+                        <div>
+                          <h3 class="text-success"><?php echo $vehicleCount; ?></h3>
+                          <p class="mb-0">Total Vehicles</p>
+                        </div>
+                        <div class="align-self-center">
+                          <i class="fas fa-car text-success fa-3x"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Feedback Card -->
+                <div class="col-xl-4 col-sm-6 col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between px-md-1">
+                        <div>
+                          <h3 class="text-info"><?php echo $feedbackCount; ?></h3>
+                          <p class="mb-0">Total Feedback</p>
+                        </div>
+                        <div class="align-self-center">
+                          <i class="fas fa-comments text-info fa-3x"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
           </div>
+
 
           <div class="card mb-4">
             <div class="card-header">
@@ -169,6 +230,8 @@ $result = $conn->query($sql);
               </table>
             </div>
           </div>
+
+
         </div>
       </main>
       <footer class="py-4 bg-light mt-auto">
