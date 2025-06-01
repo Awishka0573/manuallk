@@ -1,9 +1,10 @@
-<?php 
+<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,34 +16,50 @@ session_start();
   <title>ManualLK</title>
   <link rel="icon" type="image/png" href="../manuallk/assets/images/logotransp.png">
 </head>
-<body>
-<header>
-    <div class="navbar">
-        <div class="logo">
-            <img src="assets\images\logotransp.png" alt="Logo">
-            <p>ManualLK</p>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="pages\find.php">Find</a></li>
-            <li><a href="pages\aboutus.php">About</a></li>
-            <?php if (!isset($_SESSION['user_id'])): ?>
-                <li><a href="pages\signin.php">Contact</a></li>
-            <?php endif; ?>
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <li><a href="pages\contactus.php">Contact</a></li>
-                <li><a href="./pages/logout.php">Logout</a></li>
-            <?php endif; ?>
 
-        </ul>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="assets\images\logotransp.png" alt="Logo">
+        <p>ManualLK</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="pages\find.php">Find</a></li>
+        <li><a href="pages\aboutus.php">About</a></li>
+        <?php if (!isset($_SESSION['user_id'])): ?>
+          <li><a href="pages\signin.php">Contact</a></li>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['user_id'])): ?>
+          <li><a href="pages\contactus.php">Contact</a></li>
+          <li><a href="./pages/logout.php">Logout</a></li>
+        <?php endif; ?>
+
+      </ul>
     </div>
-</header>
+  </header>
 
   <div class="containerwelcome">
     <div class="box">
       <div class="glaz">
-        <p>Welcome Home</p>
-        <a href="pages/start.php"><button class="start-btn">Start Here</button></a>
+        <p>
+          Welcome
+          <span>
+            <?php
+            if (isset($_SESSION['user_id']) && isset($_SESSION['name'])) {
+              echo htmlspecialchars($_SESSION['name']);
+            } else {
+              echo "Home";
+            }
+            ?>
+           !</span>
+        </p>
+        <a href="pages/start.php"
+          style="<?php echo isset($_SESSION['user_id']) ? 'display: none;' : ''; ?>">
+          <button class="start-btn">Start Here</button>
+        </a>
+
       </div>
     </div>
   </div>
@@ -56,27 +73,27 @@ session_start();
   </div>
 
   <div class="vehilogo_container">
-        <div class="cardlogo">
-          <img src="../manuallk/assets/images/toyota.jpg" alt="Avatar" style="width: 100%">
-        </div>
-        <div class="cardlogo">
-          <img src="../manuallk/assets/images/bense.jpg" alt="Avatar" style="width: 100%">
-        </div>
-        <div class="cardlogo">
-          <img src="../manuallk/assets/images/bmw.jpg" alt="Avatar" style="width: 100%">
-       </div> 
-         <div class="cardlogo">
-          <img src="../manuallk/assets/images/nissan.jpg" alt="Avatar" style="width: 100%">
-        </div>
-        <div class="cardlogo">
-          <img src="../manuallk/assets/images/suzuki.jpg" alt="Avatar" style="width: 100%"> 
-         </div>
-         <div class="cardlogo">
-          <img src="../manuallk/assets/images/honda.jpg" alt="Avatar" style="width: 100%">
-        </div>
-        <div class="cardlogo">
-          <img src="../manuallk/assets/images/ISUZU-logo.jpg" alt="Avatar" style="width: 100%">
-        </div>   
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/toyota.jpg" alt="Avatar" style="width: 100%">
+    </div>
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/bense.jpg" alt="Avatar" style="width: 100%">
+    </div>
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/bmw.jpg" alt="Avatar" style="width: 100%">
+    </div>
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/nissan.jpg" alt="Avatar" style="width: 100%">
+    </div>
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/suzuki.jpg" alt="Avatar" style="width: 100%">
+    </div>
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/honda.jpg" alt="Avatar" style="width: 100%">
+    </div>
+    <div class="cardlogo">
+      <img src="../manuallk/assets/images/ISUZU-logo.jpg" alt="Avatar" style="width: 100%">
+    </div>
   </div>
 
   <div class="os_container">
@@ -84,7 +101,11 @@ session_start();
       <a href="pages/find.php"><button class="buy">Buy your vehicle</button></a>
     </div>
     <div class="oss">
+      <?php if (isset($_SESSION['user_id'])): ?>
+        <a href="./pages/sell.php"><button class="sell">Sell your vehicle</button></a>
+        <?php else: ?>
       <a href="../manuallk/pages/signin.php"><button class="sell">Sell your vehicle</button></a>
+        <?php endif; ?>
     </div>
   </div>
 
@@ -145,4 +166,5 @@ session_start();
     document.documentElement.style.scrollBehavior = "smooth";
   </script>
 </body>
+
 </html>
