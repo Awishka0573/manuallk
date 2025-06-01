@@ -13,10 +13,14 @@
             <li><a href="./aboutus.php">About</a></li>
             <?php if (!isset($_SESSION['user_id'])): ?>
                 <li><a href="./signin.php">Contact</a></li>
+                <li><a href="./signin.php">SignIn</a></li>
             <?php endif; ?>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <li><a href="./contactus.php">Contact</a></li>
                 <li><a href="./logout.php">Logout</a></li>
+            <?php endif; ?>
+            <?php if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'admin'): ?>
+                <li><a href="./admin/index.php">Admin</a></li>
             <?php endif; ?>
 
         </ul>

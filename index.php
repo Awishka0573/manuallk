@@ -25,16 +25,20 @@ session_start();
         <p>ManualLK</p>
       </div>
       <ul class="nav-links">
-        <li><a href="../index.php">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="pages\find.php">Find</a></li>
         <li><a href="pages\aboutus.php">About</a></li>
         <?php if (!isset($_SESSION['user_id'])): ?>
           <li><a href="pages\signin.php">Contact</a></li>
+          <li><a href="pages\signin.php">SignIn</a></li>
         <?php endif; ?>
         <?php if (isset($_SESSION['user_id'])): ?>
           <li><a href="pages\contactus.php">Contact</a></li>
           <li><a href="./pages/logout.php">Logout</a></li>
         <?php endif; ?>
+        <?php if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'admin'): ?>
+                <li><a href="./pages/admin/index.php">Admin</a></li>
+         <?php endif; ?>
 
       </ul>
     </div>

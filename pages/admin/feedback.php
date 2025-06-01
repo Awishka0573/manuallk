@@ -95,7 +95,7 @@ if (isset($_GET['msg'])) {
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="../../inc/logout.php">Logout</a></li>
+                <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -132,7 +132,7 @@ if (isset($_GET['msg'])) {
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
+                    <div class="small">Logged in as:Admin</div>
                 </div>
             </nav>
         </div>

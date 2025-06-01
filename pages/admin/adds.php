@@ -111,7 +111,8 @@ if(isset($_GET['msg'])) {
                     <i class="fas fa-user fa-fw"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="../../inc/logout.php">Logout</a></li>
+                <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
+
                 </ul>
             </li>
         </ul>
@@ -139,17 +140,10 @@ if(isset($_GET['msg'])) {
                                 <a class="nav-link" href="feedback.php">Manage Feedbacks</a>
                             </nav>
                         </div>
-
-                        <div class="sb-sidenav-menu-heading">User Review</div>
-                        <a class="nav-link" href="student_feedback.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Students Feedback
-                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Admin
+                <div class="small">Logged in as:Admin</div>
                 </div>
             </nav>
         </div>
@@ -232,7 +226,7 @@ if(isset($_GET['msg'])) {
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Lecture Management System Easy 2024</div>
+                    <div class="text-muted">Copyright &copy; ManualLK 2024</div>
                     </div>
                 </div>
             </footer>
@@ -241,7 +235,8 @@ if(isset($_GET['msg'])) {
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="js/scripts.js"></script>
+    l
 </body>
 
 </html>

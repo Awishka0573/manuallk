@@ -78,7 +78,7 @@ $feedbackCount = $conn->query("SELECT COUNT(*) as count FROM feedback")->fetch_a
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="../../inc/logout.php">Logout</a></li>
+          <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
         </ul>
       </li>
     </ul>
@@ -113,11 +113,11 @@ $feedbackCount = $conn->query("SELECT COUNT(*) as count FROM feedback")->fetch_a
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapseLayouts">
               <div class="sb-nav-link-icon">
-                <i class="fas fa-book-open"></i>
+               
               </div>
-              <div class="sb-sidenav-menu-heading">User review</div>
-              <a class="nav-link" href="./student_feedback.php">
-                <div class="sb-nav-link-icon"></div>
+             
+              <a class="nav-link" href="#">
+                
               </a>
           </div>
         </div>

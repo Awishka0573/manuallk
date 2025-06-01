@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['first_name'] = $user['first_name'];
+            $_SESSION['role'] = $user['role'];
             
             echo "<script>alert('Login successful!');
                   window.location.href='../index.php';</script>";
