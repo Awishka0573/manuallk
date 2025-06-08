@@ -50,510 +50,276 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Your Dream Vehicle | ManualLK</title>
-    <link rel="stylesheet" href="../assets/css/find.css">
     <link rel="icon" type="image/png" href="../assets/images/logotransp.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-        
-        :root {
-            --primary-color: #ff3838;
-            --primary-dark: #d40000;
-            --text-dark: #2d3436;
-            --text-light: #636e72;
-            --background-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--background-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)),
-                        url('../assets/images/audi.jpg') no-repeat center;
-            background-size: cover;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding: 120px 0 160px;
-        }
-
-        .hero-content {
-            color: var(--white);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        /* Search Section */
-        .search-section {
-            margin-top: -100px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .search-container {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: var(--shadow-md);
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .form-control, .form-select {
-            padding: 0.75rem 1rem;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: var(--transition);
-            color: var(--text-dark);
-        }
-
-        .form-control:focus, .form-select:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(255, 56, 56, 0.1);
-        }
-
-        .search-btn {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-            max-width: 200px;
-        }
-
-        .search-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 56, 56, 0.3);
-        }
-
-        /* Vehicles Section */
-        .vehicles-section {
-            padding: 80px 0;
-            background: var(--background-light);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .vehicles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .vehicle-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .vehicle-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .vehicle-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .vehicle-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .vehicle-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .vehicle-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .info-item i {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-        }
-
-        .vehicle-price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-top: auto;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-btn {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 1rem;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .contact-btn:hover {
-            background: var(--primary-dark);
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-light);
-        }
-
-        .no-results i {
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .no-results h3 {
-            font-size: 1.8rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .home-btn {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-            transition: var(--transition);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .home-btn:hover {
-            background: var(--white);
-            color: var(--primary-color);
-            border-color: var(--white);
-        }
-
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.8rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .vehicles-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 100px 0 140px;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .search-container {
-                padding: 25px;
-            }
-
-            .vehicles-section {
-                padding: 60px 0;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .vehicle-card {
-                max-width: 400px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .home-btn {
-                top: 20px;
-                right: 20px;
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
-            }
-
-            .search-container {
-                padding: 20px;
-                border-radius: 15px;
-            }
-
-            .vehicle-content {
-                padding: 20px;
-            }
-
-            .vehicle-title {
-                font-size: 1.2rem;
-            }
-
-            .vehicle-price {
-                font-size: 1.5rem;
-            }
-        }
-
-        .clear-btn {
-            background: #6c757d;
-            color: var(--white);
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-            max-width: 200px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .clear-btn:hover {
-            background: #5a6268;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
-            color: var(--white);
-            text-decoration: none;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
-
+<body class="bg-light">
     <?php include '../partials/navbar.php'; ?>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <a href="../index.php" class="home-btn">
-            <i class="fas fa-arrow-left"></i>
-            Back to Home
-        </a>
-        <div class="hero-content">
-            <h1 class="hero-title">Find Your Perfect Vehicle</h1>
-            <p class="hero-subtitle">Explore our extensive collection of quality vehicles</p>
-        </div>
-    </section>
 
-    <!-- Search Section -->
-    <section class="search-section">
-        <div class="search-container">
-            <form action="" method="GET">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Condition</label>
-                            <select name="condition" class="form-select">
-                                <option value="">Any Condition</option>
-                                <option value="brandnew">Brand New</option>
-                                <option value="used">Used</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Minimum Price (LKR)</label>
-                            <input type="number" name="min_price" class="form-control" placeholder="Enter minimum price">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Maximum Price (LKR)</label>
-                            <input type="number" name="max_price" class="form-control" placeholder="Enter maximum price">
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <div class="d-flex justify-content-center gap-3">
-                            <button type="submit" class="search-btn">
-                                <i class="fas fa-search"></i>
-                                Find Vehicles
-                            </button>
-                            <a href="find.php" class="clear-btn">
-                                <i class="fas fa-times"></i>
-                                Clear Filters
-                            </a>
-                        </div>
+    <!-- Hero Section with Background Image -->
+    <div class="position-relative overflow-hidden bg-dark text-white">
+        <div class="position-absolute top-0 start-0 w-100 h-100" 
+             style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('../assets/images/audi.jpg') center/cover no-repeat; z-index: -1;">
+        </div>
+        
+        <!-- Back to Home Button -->
+        <div class="position-absolute top-0 end-0 m-4">
+            <a href="../index.php" class="btn btn-outline-light btn-lg rounded-pill shadow-sm">
+                <i class="fas fa-arrow-left me-2"></i>
+                Back to Home
+            </a>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container py-5">
+            <div class="row justify-content-center text-center py-5 my-5">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4 text-shadow">Find Your Perfect Vehicle</h1>
+                    <p class="lead fs-4 mb-0 opacity-75">Explore our extensive collection of quality vehicles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Form Section -->
+    <div class="container-fluid px-4" style="margin-top: -100px; position: relative; z-index: 10;">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-11">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4 p-md-5">
+                        <form action="" method="GET">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <label class="form-label fw-semibold text-dark">
+                                        <i class="fas fa-star text-warning me-2"></i>Condition
+                                    </label>
+                                    <select name="condition" class="form-select form-select-lg border-2 rounded-3">
+                                        <option value="">Any Condition</option>
+                                        <option value="brandnew" <?php echo (isset($_GET['condition']) && $_GET['condition'] == 'brandnew') ? 'selected' : ''; ?>>Brand New</option>
+                                        <option value="used" <?php echo (isset($_GET['condition']) && $_GET['condition'] == 'used') ? 'selected' : ''; ?>>Used</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label class="form-label fw-semibold text-dark">
+                                        <i class="fas fa-money-bill-wave text-success me-2"></i>Minimum Price (LKR)
+                                    </label>
+                                    <input type="number" name="min_price" class="form-control form-control-lg border-2 rounded-3" 
+                                           placeholder="Enter minimum price" value="<?php echo isset($_GET['min_price']) ? htmlspecialchars($_GET['min_price']) : ''; ?>">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label class="form-label fw-semibold text-dark">
+                                        <i class="fas fa-money-bill-wave text-success me-2"></i>Maximum Price (LKR)
+                                    </label>
+                                    <input type="number" name="max_price" class="form-control form-control-lg border-2 rounded-3" 
+                                           placeholder="Enter maximum price" value="<?php echo isset($_GET['max_price']) ? htmlspecialchars($_GET['max_price']) : ''; ?>">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 text-center">
+                                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                                        <button type="submit" class="btn btn-danger btn-lg px-5 py-3 rounded-pill shadow-sm">
+                                            <i class="fas fa-search me-2"></i>Find Vehicles
+                                        </button>
+                                        <a href="find.php" class="btn btn-secondary btn-lg px-5 py-3 rounded-pill shadow-sm">
+                                            <i class="fas fa-times me-2"></i>Clear Filters
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Vehicles Section -->
-    <section class="vehicles-section">
-        <div class="section-header">
-            <h2 class="section-title">Available Vehicles</h2>
-            <p class="section-subtitle">Browse through our collection of high-quality vehicles</p>
-        </div>
+    <section class="py-5 mt-5">
+        <div class="container-fluid px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold text-dark mb-3">Available Vehicles</h2>
+                <p class="lead text-muted fs-5">Browse through our collection of high-quality vehicles</p>
+                <div class="mx-auto bg-danger" style="height: 4px; width: 80px; border-radius: 2px;"></div>
+            </div>
 
-        <div class="vehicles-grid">
+            <!-- Vehicles Grid -->
             <?php if ($result && $result->num_rows > 0): ?>
-                <?php while($vehicle = $result->fetch_assoc()): ?>
-                    <div class="vehicle-card">
-                        <img src="../uploads/<?php echo htmlspecialchars($vehicle['image']); ?>" 
-                             alt="<?php echo htmlspecialchars($vehicle['make'] . ' ' . $vehicle['model']); ?>" 
-                             class="vehicle-image">
-                        <div class="vehicle-content">
-                            <h3 class="vehicle-title">
-                                <?php echo htmlspecialchars($vehicle['make'] . ' ' . $vehicle['model']); ?>
-                            </h3>
-                            <div class="vehicle-info">
-                                <div class="info-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span><?php echo htmlspecialchars($vehicle['year']); ?></span>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                    <?php while($vehicle = $result->fetch_assoc()): ?>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+                                <!-- Vehicle Image -->
+                                <div class="position-relative overflow-hidden">
+                                    <img src="../uploads/<?php echo htmlspecialchars($vehicle['image']); ?>" 
+                                         alt="<?php echo htmlspecialchars($vehicle['make'] . ' ' . $vehicle['model']); ?>" 
+                                         class="card-img-top" style="height: 250px; object-fit: cover;">
+                                    <div class="position-absolute top-0 end-0 m-3">
+                                        <span class="badge bg-danger rounded-pill px-3 py-2 fs-6">
+                                            <?php echo ucfirst(htmlspecialchars($vehicle['condition'] ?? 'used')); ?>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="info-item">
-                                    <i class="fas fa-car"></i>
-                                    <span><?php echo htmlspecialchars($vehicle['v_type']); ?></span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-gas-pump"></i>
-                                    <span><?php echo htmlspecialchars($vehicle['f_type']); ?></span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span><?php echo htmlspecialchars($vehicle['city']); ?></span>
+
+                                <!-- Card Body -->
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <!-- Vehicle Title -->
+                                    <h5 class="card-title fw-bold text-dark mb-3 fs-4">
+                                        <?php echo htmlspecialchars($vehicle['make'] . ' ' . $vehicle['model']); ?>
+                                    </h5>
+
+                                    <!-- Vehicle Info Grid -->
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center text-muted">
+                                                <i class="fas fa-calendar-alt text-danger me-2"></i>
+                                                <small class="fw-medium"><?php echo htmlspecialchars($vehicle['year']); ?></small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center text-muted">
+                                                <i class="fas fa-car text-primary me-2"></i>
+                                                <small class="fw-medium"><?php echo htmlspecialchars($vehicle['v_type']); ?></small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center text-muted">
+                                                <i class="fas fa-gas-pump text-success me-2"></i>
+                                                <small class="fw-medium"><?php echo htmlspecialchars($vehicle['f_type']); ?></small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center text-muted">
+                                                <i class="fas fa-map-marker-alt text-warning me-2"></i>
+                                                <small class="fw-medium"><?php echo htmlspecialchars($vehicle['city']); ?></small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="mb-3">
+                                        <h4 class="text-danger fw-bold mb-2">
+                                            LKR <?php echo ($vehicle['price']); ?>
+                                        </h4>
+                                        <div class="d-flex align-items-center text-dark">
+                                            <i class="fas fa-phone text-info me-2"></i>
+                                            <span class="fw-semibold"><?php echo htmlspecialchars($vehicle['phone']); ?></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact Button -->
+                                    <div class="mt-auto">
+                                        <button class="btn btn-danger w-100 py-3 rounded-pill fw-semibold shadow-sm contact-seller-btn" 
+                                                data-phone="<?php echo htmlspecialchars($vehicle['phone']); ?>"
+                                                data-vehicle="<?php echo htmlspecialchars($vehicle['make'] . ' ' . $vehicle['model']); ?>">
+                                            <i class="fas fa-phone me-2"></i>Contact Seller
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="vehicle-price">
-                                LKR <?php echo number_format($vehicle['price']); ?>
-                            </div>
-                            <div class="vehicle-price" style="color: #2d3436 ! important; font-size:22px;">
-                               phone - <?php echo number_format($vehicle['phone']); ?>
-                            </div>
-                            <button class="contact-btn" onclick="window.location.href='tel:<?php echo htmlspecialchars($vehicle['phone']); ?>'">
-                                <i class="fas fa-phone"></i>
-                                Contact Seller
-                            </button>
                         </div>
-                    </div>
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
+                </div>
             <?php else: ?>
-                <div class="no-results">
-                    <i class="fas fa-car-slash"></i>
-                    <h3>No Vehicles Found</h3>
-                    <p>Try adjusting your search filters to find more results</p>
+                <!-- No Results -->
+                <div class="text-center py-5">
+                    <div class="mb-4">
+                        <i class="fas fa-car-slash display-1 text-muted"></i>
+                    </div>
+                    <h3 class="text-dark mb-3">No Vehicles Found</h3>
+                    <p class="text-muted fs-5 mb-4">Try adjusting your search filters to find more results</p>
+                    <a href="find.php" class="btn btn-danger btn-lg rounded-pill px-5">
+                        <i class="fas fa-refresh me-2"></i>Reset Search
+                    </a>
                 </div>
             <?php endif; ?>
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Add hover effects using Bootstrap classes
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover animation to cards
+            const cards = document.querySelectorAll('.hover-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'all 0.3s ease';
+                    this.classList.add('shadow-lg');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.classList.remove('shadow-lg');
+                    this.classList.add('shadow-sm');
+                });
+            });
+
+            // Contact Seller Button with SweetAlert
+            const contactButtons = document.querySelectorAll('.contact-seller-btn');
+            contactButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const phone = this.getAttribute('data-phone');
+                    const vehicle = this.getAttribute('data-vehicle');
+                    
+                    Swal.fire({
+                        title: 'Contact Seller',
+                        html: `
+                            <div class="text-start">
+                                <p class="mb-3"><strong>Vehicle:</strong> ${vehicle}</p>
+                                <p class="mb-3"><strong>Phone:</strong> ${phone}</p>
+                                <p class="text-muted">Would you like to call the seller now?</p>
+                            </div>
+                        `,
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: '<i class="fas fa-phone me-2"></i>Call Now',
+                        cancelButtonText: 'Cancel',
+                        confirmButtonColor: '#dc3545',
+                        cancelButtonColor: '#6c757d',
+                        customClass: {
+                            popup: 'rounded-4',
+                            confirmButton: 'rounded-pill px-4',
+                            cancelButton: 'rounded-pill px-4'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = `tel:${phone}`;
+                        }
+                    });
+                });
+            });
+
+            // Show success message if filters were applied
+            <?php if (!empty($_GET)): ?>
+                const filterCount = <?php echo count(array_filter($_GET)); ?>;
+                const resultCount = <?php echo $result ? $result->num_rows : 0; ?>;
+                
+                if (filterCount > 0) {
+                    Swal.fire({
+                        title: 'Filters Applied!',
+                        text: `Found ${resultCount} vehicle(s) matching your criteria`,
+                        icon: 'success',
+                        timer: 2000,
+                        showConfirmButton: false,
+                        customClass: {
+                            popup: 'rounded-4'
+                        }
+                    });
+                }
+            <?php endif; ?>
+
+            // Add text shadow effect
+            const textShadowElements = document.querySelectorAll('.text-shadow');
+            textShadowElements.forEach(element => {
+                element.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)';
+            });
+        });
+    </script>
 </body>
 </html>
